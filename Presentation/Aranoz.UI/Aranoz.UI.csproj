@@ -6,4 +6,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\aranoz-master\img\.DS_Store" />
+    <None Include="wwwroot\aranoz-master\img\blog\.DS_Store" />
+    <None Include="wwwroot\aranoz-master\img\product\.DS_Store" />
+    <None Include="wwwroot\aranoz-master\img\product\blog\.DS_Store" />
+    <None Include="wwwroot\aranoz-master\img\product\product\.DS_Store" />
+  </ItemGroup>
+
 </Project>
