@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{DC9C8377-103F-4954-B0A7-8B39A4C25204}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructer", "Infrastructer", "{B0BF4D07-7837-4757-B7CC-1A004C86A5EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{DD38F2DC-C7C3-47CA-8EBE-F8A7BB7E9F5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aranoz.Application", "Core\Aranoz.Application\Aranoz.Application.csproj", "{5B24A9A6-9B44-470C-9128-5E356803C480}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aranoz.Domain", "Core\Aranoz.Domain\Aranoz.Domain.csproj", "{FC6DAFCD-FBC0-4233-9D67-11BD6E079E2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aranoz.Persistance", "Infrastructer\Aranoz.Persistance\Aranoz.Persistance.csproj", "{C262D607-8045-4FA4-B45E-D95CCF9F71BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aranoz.Api", "Presentation\Aranoz.Api\Aranoz.Api.csproj", "{F88F0F8E-6DBE-4B4D-A840-FDFD96E48437}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aranoz.UI", "Presentation\Aranoz.UI\Aranoz.UI.csproj", "{57289745-9B61-4DDE-ABC5-925F6D7E69DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B24A9A6-9B44-470C-9128-5E356803C480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B24A9A6-9B44-470C-9128-5E356803C480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B24A9A6-9B44-470C-9128-5E356803C480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B24A9A6-9B44-470C-9128-5E356803C480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC6DAFCD-FBC0-4233-9D67-11BD6E079E2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC6DAFCD-FBC0-4233-9D67-11BD6E079E2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC6DAFCD-FBC0-4233-9D67-11BD6E079E2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC6DAFCD-FBC0-4233-9D67-11BD6E079E2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C262D607-8045-4FA4-B45E-D95CCF9F71BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C262D607-8045-4FA4-B45E-D95CCF9F71BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C262D607-8045-4FA4-B45E-D95CCF9F71BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C262D607-8045-4FA4-B45E-D95CCF9F71BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F88F0F8E-6DBE-4B4D-A840-FDFD96E48437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F88F0F8E-6DBE-4B4D-A840-FDFD96E48437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F88F0F8E-6DBE-4B4D-A840-FDFD96E48437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F88F0F8E-6DBE-4B4D-A840-FDFD96E48437}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57289745-9B61-4DDE-ABC5-925F6D7E69DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57289745-9B61-4DDE-ABC5-925F6D7E69DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57289745-9B61-4DDE-ABC5-925F6D7E69DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57289745-9B61-4DDE-ABC5-925F6D7E69DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5B24A9A6-9B44-470C-9128-5E356803C480} = {DC9C8377-103F-4954-B0A7-8B39A4C25204}
+		{FC6DAFCD-FBC0-4233-9D67-11BD6E079E2E} = {DC9C8377-103F-4954-B0A7-8B39A4C25204}
+		{C262D607-8045-4FA4-B45E-D95CCF9F71BD} = {B0BF4D07-7837-4757-B7CC-1A004C86A5EC}
+		{F88F0F8E-6DBE-4B4D-A840-FDFD96E48437} = {DD38F2DC-C7C3-47CA-8EBE-F8A7BB7E9F5B}
+		{57289745-9B61-4DDE-ABC5-925F6D7E69DF} = {DD38F2DC-C7C3-47CA-8EBE-F8A7BB7E9F5B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EC9BACD7-1D60-47F2-98F7-7F34724605A8}
+	EndGlobalSection
+EndGlobal
