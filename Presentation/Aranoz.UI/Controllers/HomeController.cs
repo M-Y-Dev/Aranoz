@@ -20,7 +20,8 @@ namespace Aranoz.UI.Controllers
         }
 
         public IActionResult Privacy()
-        {
+        {   
+            //test 12345
             return View();
         }
 
