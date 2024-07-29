@@ -16,7 +16,7 @@ namespace Aranoz.UI.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(); // test 123
         }
 
         public IActionResult Privacy()
