@@ -12,14 +12,13 @@ namespace Aranoz.UI.Controllers
         {
             _logger = logger;
         }
-        //test test
 
         public IActionResult Index()
         { 
-            //batuhan test 123 
-            return View(); // test 123
+            
+            return View(); 
         }
-        //deneme
+
 
         public IActionResult Privacy()
         {
