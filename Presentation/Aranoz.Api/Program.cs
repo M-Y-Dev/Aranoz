@@ -7,8 +7,8 @@ builder.Services.AddDbContext<AranozContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
-
-// Add services to the container.
+// TEst
+// Add services to the container. 
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
