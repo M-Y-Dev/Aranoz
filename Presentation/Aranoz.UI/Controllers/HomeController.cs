@@ -15,7 +15,8 @@ namespace Aranoz.UI.Controllers
         //test test
 
         public IActionResult Index()
-        {
+        { 
+            //batuhan test 123 
             return View(); // test 123
         }
 
