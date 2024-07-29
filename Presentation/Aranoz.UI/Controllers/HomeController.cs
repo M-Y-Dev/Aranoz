@@ -17,6 +17,7 @@ namespace Aranoz.UI.Controllers
         {
             return View();
         }
+        //deneme
 
         public IActionResult Privacy()
         {
