@@ -22,7 +22,9 @@ namespace Aranoz.UI.Controllers
         //test test 12354
         public IActionResult Privacy()
         {
+            // deneme
             return View();
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -30,5 +32,7 @@ namespace Aranoz.UI.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
+
 }
