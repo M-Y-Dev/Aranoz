@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Aranoz.Domain.Entity.Common
+namespace Aranoz.Domain.Entity
 {
     public class AppUser
     {
