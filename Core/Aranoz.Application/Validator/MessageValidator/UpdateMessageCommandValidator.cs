@@ -21,5 +21,5 @@ namespace Aranoz.Application.Validator.MessageValidator
         }
     }
 }
-    }
-}
+    
+

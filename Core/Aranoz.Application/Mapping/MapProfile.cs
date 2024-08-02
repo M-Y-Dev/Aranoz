@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Aranoz.Application.Mediator.Commands.ProductCommands;
 using Aranoz.Application.Mediator.Results.ProductResults;
+using Aranoz.Application.Mediator.Commands.ContactCommands;
+using Aranoz.Application.Mediator.Results.ContactResults;
 
 namespace Aranoz.Application.Mapping
 {
@@ -32,6 +34,11 @@ namespace Aranoz.Application.Mapping
             CreateMap<Comment, UpdateCommentCommand>().ReverseMap();
             CreateMap<Comment, GetCommentByIdQueryResult>().ReverseMap();
             CreateMap<Comment, GetCommentQueryResult>().ReverseMap();
+
+            CreateMap<Contact, CreateContactCommand>().ReverseMap();
+            CreateMap<Contact, UpdateContactCommand>().ReverseMap();
+            CreateMap<Contact, GetContactByIdQueryResult>().ReverseMap();
+            CreateMap<Contact, GetContactQueryResult>().ReverseMap();
 
 
         }
