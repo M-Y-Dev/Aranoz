@@ -27,8 +27,4 @@
     <ProjectReference Include="..\Aranoz.Domain\Aranoz.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Mediator\Commands\AddressCommands\" />
-  </ItemGroup>
-
 </Project>
