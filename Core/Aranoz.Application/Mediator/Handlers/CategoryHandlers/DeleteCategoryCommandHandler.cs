@@ -1,9 +1,8 @@
 ﻿using Aranoz.Application.Base;
 using Aranoz.Application.Interfaces;
-using Aranoz.Application.Mediator.Commands.CommentCommands;
-using Aranoz.Application.Validator.CommentValidator;
+using Aranoz.Application.Mediator.Commands.CategoryCommands;
+using Aranoz.Application.Validator.CategoryValidator;
 using Aranoz.Domain.Entity;
-using AutoMapper;
 using FluentValidation.Results;
 using MediatR;
 using System;
@@ -13,22 +12,19 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Aranoz.Application.Mediator.Handlers.CommentHandlers
+namespace Aranoz.Application.Mediator.Handlers.CategoryHandlers
 {
-    public class DeleteCommentCommandHandler : IRequestHandler<DeleteCommentCommand, Response<object>>
+    public class DeleteCategoryCommandHandler : IRequestHandler<DeleteCategoryCommand, Response<object>>
     {
-        private readonly IRepository<Comment> _repository;
-        private readonly IMapper _mapper;
+        private readonly IRepository<Category> _repository;
 
-        public DeleteCommentCommandHandler(IRepository<Comment> repository, IMapper mapper)
+        public DeleteCategoryCommandHandler(IRepository<Category> repository)
         {
             _repository = repository;
-            _mapper = mapper;
         }
-
-        public async Task<Response<object>> Handle(DeleteCommentCommand request, CancellationToken cancellationToken)
+        public async Task<Response<object>> Handle(DeleteCategoryCommand request, CancellationToken cancellationToken)
         {
-            DeleteCommentCommandValidator validationRules = new DeleteCommentCommandValidator();
+            DeleteCategoryCommandValidator validationRules = new DeleteCategoryCommandValidator();
             ValidationResult validation = validationRules.Validate(request);
             if (!validation.IsValid)
             {
@@ -64,8 +60,6 @@ namespace Aranoz.Application.Mediator.Handlers.CommentHandlers
                 IsSuccessfull = true,
                 Message = null,
             };
-
         }
     }
 }
-
