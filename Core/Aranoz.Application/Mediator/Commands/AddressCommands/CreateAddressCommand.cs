@@ -10,7 +10,7 @@ namespace Aranoz.Application.Mediator.Commands.AddressCommands
 {
     public class CreateAddressCommand : IRequest<Response<object>>
     {
-      
+     
         public string Country { get; set; }
         public string City { get; set; }
         public string AddressDetail { get; set; }
