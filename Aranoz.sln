@@ -9,15 +9,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructer", "Infrastruc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{DD38F2DC-C7C3-47CA-8EBE-F8A7BB7E9F5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aranoz.Application", "Core\Aranoz.Application\Aranoz.Application.csproj", "{5B24A9A6-9B44-470C-9128-5E356803C480}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aranoz.Application", "Core\Aranoz.Application\Aranoz.Application.csproj", "{5B24A9A6-9B44-470C-9128-5E356803C480}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aranoz.Domain", "Core\Aranoz.Domain\Aranoz.Domain.csproj", "{FC6DAFCD-FBC0-4233-9D67-11BD6E079E2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aranoz.Domain", "Core\Aranoz.Domain\Aranoz.Domain.csproj", "{FC6DAFCD-FBC0-4233-9D67-11BD6E079E2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aranoz.Persistance", "Infrastructer\Aranoz.Persistance\Aranoz.Persistance.csproj", "{C262D607-8045-4FA4-B45E-D95CCF9F71BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aranoz.Persistance", "Infrastructer\Aranoz.Persistance\Aranoz.Persistance.csproj", "{C262D607-8045-4FA4-B45E-D95CCF9F71BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aranoz.Api", "Presentation\Aranoz.Api\Aranoz.Api.csproj", "{F88F0F8E-6DBE-4B4D-A840-FDFD96E48437}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aranoz.Api", "Presentation\Aranoz.Api\Aranoz.Api.csproj", "{F88F0F8E-6DBE-4B4D-A840-FDFD96E48437}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aranoz.UI", "Presentation\Aranoz.UI\Aranoz.UI.csproj", "{57289745-9B61-4DDE-ABC5-925F6D7E69DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aranoz.UI", "Presentation\Aranoz.UI\Aranoz.UI.csproj", "{57289745-9B61-4DDE-ABC5-925F6D7E69DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

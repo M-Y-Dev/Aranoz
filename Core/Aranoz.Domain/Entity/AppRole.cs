@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Aranoz.Application.Mediator
+namespace Aranoz.Domain.Entity
 {
-    internal class test
+    public class AppRole
     {
     }
 }

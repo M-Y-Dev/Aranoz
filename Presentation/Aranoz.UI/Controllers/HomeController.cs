@@ -12,17 +12,18 @@ namespace Aranoz.UI.Controllers
         {
             _logger = logger;
         }
-        //test test
 
         public IActionResult Index()
-        {
-            return View();
+        { 
+            
+            return View(); 
         }
 
+        //test test 12354
         public IActionResult Privacy()
-        {   
-            //test 12345
+        {
             return View();
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -30,5 +31,7 @@ namespace Aranoz.UI.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
+
 }
