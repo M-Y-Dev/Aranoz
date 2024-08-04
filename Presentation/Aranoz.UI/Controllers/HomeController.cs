@@ -22,6 +22,7 @@ namespace Aranoz.UI.Controllers
         //test test 12354
         public IActionResult Privacy()
         {
+            // deneme
             return View();
 
         }

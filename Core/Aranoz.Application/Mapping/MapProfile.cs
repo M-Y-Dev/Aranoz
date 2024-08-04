@@ -13,8 +13,8 @@ using Aranoz.Application.Mediator.Commands.ProductCommands;
 using Aranoz.Application.Mediator.Results.ProductResults;
 using Aranoz.Application.Mediator.Commands.ContactCommands;
 using Aranoz.Application.Mediator.Results.ContactResults;
-using Aranoz.Application.Mediator.Commands.OrderCommands;
-using Aranoz.Application.Mediator.Results.OrderResults;
+using Aranoz.Application.Mediator.Commands.CategoryCommands;
+using Aranoz.Application.Mediator.Results.CategoryResults;
 
 namespace Aranoz.Application.Mapping
 {
@@ -42,6 +42,10 @@ namespace Aranoz.Application.Mapping
             CreateMap<Contact, GetContactByIdQueryResult>().ReverseMap();
             CreateMap<Contact, GetContactQueryResult>().ReverseMap();
 
+            CreateMap<Category, CreateCategoryCommand>().ReverseMap();
+            CreateMap<Category, UpdateCategoryCommand>().ReverseMap();
+            CreateMap<Category, GetCategoryByIdQueryResult>().ReverseMap();
+            CreateMap<Category, GetCategoryQueryResult>().ReverseMap();
 
             CreateMap<Order, CreateOrderCommand>().ReverseMap();
             CreateMap<Order, UpdateOrderCommand>().ReverseMap();
