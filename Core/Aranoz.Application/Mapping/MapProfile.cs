@@ -17,6 +17,8 @@ using Aranoz.Application.Mediator.Commands.OrderCommands;
 using Aranoz.Application.Mediator.Results.OrderResults;
 using Aranoz.Application.Mediator.Commands.CategoryCommands;
 using Aranoz.Application.Mediator.Results.CategoryResults;
+using Aranoz.Application.Mediator.Commands.BasketCommands;
+using Aranoz.Application.Mediator.Results.BasketResults;
 
 namespace Aranoz.Application.Mapping
 {
@@ -53,6 +55,11 @@ namespace Aranoz.Application.Mapping
             CreateMap<Category, UpdateCategoryCommand>().ReverseMap();
             CreateMap<Category, GetCategoryByIdQueryResult>().ReverseMap();
             CreateMap<Category, GetCategoryQueryResult>().ReverseMap();
+
+            CreateMap<Basket, CreateBasketCommand>().ReverseMap();
+            CreateMap<Basket, UpdateBasketCommand>().ReverseMap();
+            CreateMap<Basket, GetBasketByIdQueryResult>().ReverseMap();
+            CreateMap<Basket, GetBasketQueryResult>().ReverseMap();
 
 
         }

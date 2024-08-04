@@ -10,11 +10,11 @@ namespace Aranoz.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ContactController : ControllerBase
+    public class ContactsController : ControllerBase
     {
         private readonly IMediator _mediator;
 
-        public ContactController(IMediator mediator)
+        public ContactsController(IMediator mediator)
         {
             _mediator = mediator;
         }
