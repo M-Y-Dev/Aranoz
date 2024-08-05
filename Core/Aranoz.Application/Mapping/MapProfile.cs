@@ -58,6 +58,7 @@ namespace Aranoz.Application.Mapping
             CreateMap<Category, GetCategoryByIdQueryResult>().ReverseMap();
             CreateMap<Category, GetCategoryQueryResult>().ReverseMap();
 
+
             CreateMap<Basket, CreateBasketCommand>().ReverseMap();
             CreateMap<Basket, UpdateBasketCommand>().ReverseMap();
             CreateMap<Basket, GetBasketByIdQueryResult>().ReverseMap();

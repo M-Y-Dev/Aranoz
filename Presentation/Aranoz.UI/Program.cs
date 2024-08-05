@@ -1,7 +1,13 @@
+using Aranoz.UI.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
+builder.Services.AddHttpClient();
+
 builder.Services.AddControllersWithViews();
+
+builder.Services.Configure<ApiBaseUrl>(builder.Configuration.GetSection("ApiSettingBaseUrl")); // ApiBaseUrl sýnýfý ile appsetting.json da ki base url birleþtirdik.
 
 var app = builder.Build();
 
