@@ -14,4 +14,13 @@
     <None Include="wwwroot\aranoz-master\img\product\product\.DS_Store" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.17" />
+  </ItemGroup>
+
 </Project>
