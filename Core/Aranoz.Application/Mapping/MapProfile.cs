@@ -1,4 +1,6 @@
 ﻿using Aranoz.Application.Mediator.Commands.AddressCommands;
+using Aranoz.Application.Mediator.Commands.AppRoleCommands;
+using Aranoz.Application.Mediator.Commands.AppUserCommands;
 using Aranoz.Application.Mediator.Commands.BasketCommands;
 using Aranoz.Application.Mediator.Commands.CategoryCommands;
 using Aranoz.Application.Mediator.Commands.CommentCommands;
@@ -7,6 +9,8 @@ using Aranoz.Application.Mediator.Commands.MessageCommands;
 using Aranoz.Application.Mediator.Commands.OrderCommands;
 using Aranoz.Application.Mediator.Commands.ProductCommands;
 using Aranoz.Application.Mediator.Results.AddressResults;
+using Aranoz.Application.Mediator.Results.AppRoleResults;
+using Aranoz.Application.Mediator.Results.AppUserResults;
 using Aranoz.Application.Mediator.Results.BasketResults;
 using Aranoz.Application.Mediator.Results.CategoryResults;
 using Aranoz.Application.Mediator.Results.CommentResults;
@@ -62,6 +66,18 @@ namespace Aranoz.Application.Mapping
             CreateMap<Basket, UpdateBasketCommand>().ReverseMap();
             CreateMap<Basket, GetBasketByIdQueryResult>().ReverseMap();
             CreateMap<Basket, GetBasketQueryResult>().ReverseMap();
+
+
+            CreateMap<AppUser,CreateAppUserCommand>().ReverseMap();
+            CreateMap<AppUser,UpdateAppUserCommand>().ReverseMap();
+            CreateMap<AppUser,GetAppUserByIdQueryResult>().ReverseMap();
+            CreateMap<AppUser,GetAppUserQueryResult>().ReverseMap(); 
+            
+            CreateMap<AppRole,CreateAppRoleCommand>().ReverseMap();
+            CreateMap<AppRole,UpdateAppRoleCommand>().ReverseMap();
+            CreateMap<AppRole,GetAppRoleByIdQueryResult>().ReverseMap();
+            CreateMap<AppRole,GetAppRoleQueryResult>().ReverseMap();
+
         }
     }
 }
