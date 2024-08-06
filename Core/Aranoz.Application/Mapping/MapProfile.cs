@@ -19,6 +19,8 @@ using Aranoz.Application.Mediator.Commands.CategoryCommands;
 using Aranoz.Application.Mediator.Results.CategoryResults;
 using Aranoz.Application.Mediator.Commands.BasketCommands;
 using Aranoz.Application.Mediator.Results.BasketResults;
+using Aranoz.Application.Mediator.Commands.BrandCommands;
+using Aranoz.Application.Mediator.Results.BrandResults;
 
 namespace Aranoz.Application.Mapping
 {
@@ -61,7 +63,10 @@ namespace Aranoz.Application.Mapping
             CreateMap<Basket, GetBasketByIdQueryResult>().ReverseMap();
             CreateMap<Basket, GetBasketQueryResult>().ReverseMap();
 
-
+            CreateMap<Brand, CreateBrandCommand>().ReverseMap();
+            CreateMap<Brand, UpdateBrandCommand>().ReverseMap();
+            CreateMap<Brand, GetBrandByIdQueryResult>().ReverseMap();
+            CreateMap<Brand, GetBrandQueryResult>().ReverseMap();
         }
     }
 }
