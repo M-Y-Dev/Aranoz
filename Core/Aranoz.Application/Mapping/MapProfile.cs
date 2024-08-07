@@ -71,6 +71,17 @@ namespace Aranoz.Application.Mapping
             CreateMap<Basket, UpdateBasketCommand>().ReverseMap();
             CreateMap<Basket, GetBasketByIdQueryResult>().ReverseMap();
             CreateMap<Basket, GetBasketQueryResult>().ReverseMap();
+
+            CreateMap<Brand, CreateBrandCommand>().ReverseMap();
+            CreateMap<Brand, UpdateBrandCommand>().ReverseMap();
+            CreateMap<Brand, GetBrandByIdQueryResult>().ReverseMap();
+            CreateMap<Brand, GetBrandQueryResult>().ReverseMap();
+
+            CreateMap<ProductDetail, CreateProductDetailCommand>().ReverseMap();
+            CreateMap<ProductDetail, UpdateProductDetailCommand>().ReverseMap();
+            CreateMap<ProductDetail, GetProductDetailByIdQueryResult>().ReverseMap();
+            CreateMap<ProductDetail, GetProductDetailQueryResult>().ReverseMap();
+
         }
     }
 }
