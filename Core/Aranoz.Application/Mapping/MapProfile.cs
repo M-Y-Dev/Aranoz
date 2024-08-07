@@ -3,6 +3,8 @@ using Aranoz.Application.Mediator.Commands.AppRoleCommands;
 using Aranoz.Application.Mediator.Commands.AppUserCommands;
 using Aranoz.Application.Mediator.Commands.BannerCommands;
 using Aranoz.Application.Mediator.Commands.BasketCommands;
+using Aranoz.Application.Mediator.Commands.BlogCategoryCommands;
+using Aranoz.Application.Mediator.Commands.BlogCommands;
 using Aranoz.Application.Mediator.Commands.BrandCommands;
 using Aranoz.Application.Mediator.Commands.CategoryCommands;
 using Aranoz.Application.Mediator.Commands.CommentCommands;
@@ -16,6 +18,8 @@ using Aranoz.Application.Mediator.Results.AppRoleResults;
 using Aranoz.Application.Mediator.Results.AppUserResults;
 using Aranoz.Application.Mediator.Results.BannerResults;
 using Aranoz.Application.Mediator.Results.BasketResults;
+using Aranoz.Application.Mediator.Results.BlogCategoryResults;
+using Aranoz.Application.Mediator.Results.BlogResults;
 using Aranoz.Application.Mediator.Results.BrandResults;
 using Aranoz.Application.Mediator.Results.CategoryResults;
 using Aranoz.Application.Mediator.Results.CommentResults;
@@ -88,6 +92,16 @@ namespace Aranoz.Application.Mapping
             CreateMap<Banner, UpdateBannerCommand>().ReverseMap();
             CreateMap<Banner, GetBannerByIdQueryResult>().ReverseMap();
             CreateMap<Banner, GetBannerQueryResult>().ReverseMap();
+
+            CreateMap<Blog, CreateBlogCommand>().ReverseMap();
+            CreateMap<Blog, UpdateBlogCommand>().ReverseMap();
+            CreateMap<Blog, GetBlogByIdQueryResult>().ReverseMap();
+            CreateMap<Blog, GetBlogQueryResult>().ReverseMap();
+
+            CreateMap<BlogCategory, CreateBlogCategoryCommand>().ReverseMap();
+            CreateMap<BlogCategory, UpdateBlogCategoryCommand>().ReverseMap();
+            CreateMap<BlogCategory, GetBlogCategoryByIdQueryResult>().ReverseMap();
+            CreateMap<BlogCategory, GetBlogCategoryQueryResult>().ReverseMap();
 
 
         }

@@ -29,5 +29,7 @@ namespace Aranoz.Persistance.Context
         public DbSet<ProductDetail> ProductDetails { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<AppRole> AppRoles { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
+        public DbSet<BlogCategory> BlogCategories { get; set; }
     }
 }
