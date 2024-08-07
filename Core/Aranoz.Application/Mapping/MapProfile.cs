@@ -3,6 +3,7 @@ using Aranoz.Application.Mediator.Commands.AppRoleCommands;
 using Aranoz.Application.Mediator.Commands.AppUserCommands;
 using Aranoz.Application.Mediator.Commands.BannerCommands;
 using Aranoz.Application.Mediator.Commands.BasketCommands;
+using Aranoz.Application.Mediator.Commands.BasketItemCommands;
 using Aranoz.Application.Mediator.Commands.BlogCategoryCommands;
 using Aranoz.Application.Mediator.Commands.BlogCommands;
 using Aranoz.Application.Mediator.Commands.BrandCommands;
@@ -17,6 +18,7 @@ using Aranoz.Application.Mediator.Results.AddressResults;
 using Aranoz.Application.Mediator.Results.AppRoleResults;
 using Aranoz.Application.Mediator.Results.AppUserResults;
 using Aranoz.Application.Mediator.Results.BannerResults;
+using Aranoz.Application.Mediator.Results.BasketItemResults;
 using Aranoz.Application.Mediator.Results.BasketResults;
 using Aranoz.Application.Mediator.Results.BlogCategoryResults;
 using Aranoz.Application.Mediator.Results.BlogResults;
@@ -77,6 +79,11 @@ namespace Aranoz.Application.Mapping
             CreateMap<Basket, UpdateBasketCommand>().ReverseMap();
             CreateMap<Basket, GetBasketByIdQueryResult>().ReverseMap();
             CreateMap<Basket, GetBasketQueryResult>().ReverseMap();
+
+            CreateMap<BasketItem, CreateBasketItemCommand>().ReverseMap();
+            CreateMap<BasketItem, UpdateBasketItemCommand>().ReverseMap();
+            CreateMap<BasketItem, GetBasketItemByIdQueryResult>().ReverseMap();
+            CreateMap<BasketItem, GetBasketItemQueryResult>().ReverseMap();
 
             CreateMap<Brand, CreateBrandCommand>().ReverseMap();
             CreateMap<Brand, UpdateBrandCommand>().ReverseMap();
