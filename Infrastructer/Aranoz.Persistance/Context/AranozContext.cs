@@ -18,6 +18,7 @@ namespace Aranoz.Persistance.Context
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<BasketItem> BasketItems { get; set; }
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<Banner> Banners { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Contact> Contacts { get; set; }
@@ -25,8 +26,8 @@ namespace Aranoz.Persistance.Context
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Product> Products { get; set; }
-        public DbSet<ProductDetail> ProductDetails { get; set; } 
-        public DbSet<AppUser> AppUsers { get; set; }  
+        public DbSet<ProductDetail> ProductDetails { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<AppRole> AppRoles { get; set; }
     }
 }

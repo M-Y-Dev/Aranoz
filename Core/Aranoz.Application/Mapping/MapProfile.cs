@@ -1,6 +1,7 @@
 ﻿using Aranoz.Application.Mediator.Commands.AddressCommands;
 using Aranoz.Application.Mediator.Commands.AppRoleCommands;
 using Aranoz.Application.Mediator.Commands.AppUserCommands;
+using Aranoz.Application.Mediator.Commands.BannerCommands;
 using Aranoz.Application.Mediator.Commands.BasketCommands;
 using Aranoz.Application.Mediator.Commands.BrandCommands;
 using Aranoz.Application.Mediator.Commands.CategoryCommands;
@@ -13,6 +14,7 @@ using Aranoz.Application.Mediator.Commands.ProductDetailCommands;
 using Aranoz.Application.Mediator.Results.AddressResults;
 using Aranoz.Application.Mediator.Results.AppRoleResults;
 using Aranoz.Application.Mediator.Results.AppUserResults;
+using Aranoz.Application.Mediator.Results.BannerResults;
 using Aranoz.Application.Mediator.Results.BasketResults;
 using Aranoz.Application.Mediator.Results.BrandResults;
 using Aranoz.Application.Mediator.Results.CategoryResults;
@@ -81,6 +83,12 @@ namespace Aranoz.Application.Mapping
             CreateMap<ProductDetail, UpdateProductDetailCommand>().ReverseMap();
             CreateMap<ProductDetail, GetProductDetailByIdQueryResult>().ReverseMap();
             CreateMap<ProductDetail, GetProductDetailQueryResult>().ReverseMap();
+
+            CreateMap<Banner, CreateBannerCommand>().ReverseMap();
+            CreateMap<Banner, UpdateBannerCommand>().ReverseMap();
+            CreateMap<Banner, GetBannerByIdQueryResult>().ReverseMap();
+            CreateMap<Banner, GetBannerQueryResult>().ReverseMap();
+
 
         }
     }
