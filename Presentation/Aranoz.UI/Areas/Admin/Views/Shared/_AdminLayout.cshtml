@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("AdminLayoutHeadComponentPartial")
+<body id="page-top">
+    <div id="wrapper">
+        @await Component.InvokeAsync("AdminLayoutSidebarComponentPartial")
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                @await Component.InvokeAsync("AdminLayoutTopbarComponentPartial")
+                <div class="container-fluid">
+                    <div class="row">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+            @await Component.InvokeAsync("AdminLayoutFooterComponentPartial")
+        </div>
+    </div>
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    @await Component.InvokeAsync("AdminLayoutLogoutModalComponentPartial")
+    @await Component.InvokeAsync("AdminLayoutScriptsComponentPartial")
+</body>
+</html>
