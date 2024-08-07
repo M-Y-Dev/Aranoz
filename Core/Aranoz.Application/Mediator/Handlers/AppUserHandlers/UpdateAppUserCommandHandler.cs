@@ -1,7 +1,7 @@
 ﻿using Aranoz.Application.Base;
 using Aranoz.Application.Interfaces;
-using Aranoz.Application.Mediator.Commands.OrderCommands;
-using Aranoz.Application.Validator.OrderValidator;
+using Aranoz.Application.Mediator.Commands.AppUserCommands;
+using Aranoz.Application.Validator.AppUserValidator;
 using Aranoz.Domain.Entity;
 using AutoMapper;
 using FluentValidation.Results;
@@ -13,45 +13,44 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Aranoz.Application.Mediator.Handlers.OrderHandlers
+namespace Aranoz.Application.Mediator.Handlers.AppUserHandlers
 {
-    public class UptadeOrderCommandHandler : IRequestHandler<UpdateOrderCommand, Response<object>>
-    { 
-        private readonly IRepository<Order> _repository;
+    public class UpdateAppUserCommandHandler : IRequestHandler<UpdateAppUserCommand, Response<object>>
+    {
+        private readonly IRepository<AppUser> _repository;
         private readonly IMapper _mapper;
-        public UptadeOrderCommandHandler(IRepository<Order> repository, IMapper mapper)
+        public UpdateAppUserCommandHandler(IRepository<AppUser> repository, IMapper mapper)
         {
             _repository = repository;
             _mapper = mapper;
         }
 
-        public async Task<Response<object>> Handle(UpdateOrderCommand request, CancellationToken cancellationToken)
+        public async Task<Response<object>> Handle(UpdateAppUserCommand request, CancellationToken cancellationToken)
         {
-            UpdateOrderCommandValidator validationRules = new UpdateOrderCommandValidator(); 
-            ValidationResult validation= validationRules.Validate(request);  
-            if (!validation.IsValid) 
-            {  
-                 var response= new Response<object>();
+            UpdateAppUseCommandValidator validationRules = new UpdateAppUseCommandValidator();
+            ValidationResult validation = validationRules.Validate(request);
+            if (!validation.IsValid)
+            {
+                var response = new Response<object>();
                 foreach (var item in validation.Errors)
                 {
                     response.Errors.Add(item.ErrorMessage.ToString());
                 }
-
                 response.StatusCode = 400;
                 response.Data = null;
                 response.IsSuccessfull = false;
-                response.Message = "Kayıt güncellenirken Sorun Yaşandı";
+                response.Message = "Kayıt Eklenirken Sorun Yaşandı";
                 return response;
-
             } 
-            var result =_mapper.Map<Order>(request); 
+
+            var result=_mapper.Map<AppUser>(request); 
             await _repository.UpdateAsync(result);
             return new Response<object>
             {
                 StatusCode = (int)HttpStatusCode.Created,
                 Data = null,
                 IsSuccessfull = true,
-                Message = "Kayıt başarıyla güncellendi"
+                Message = "Kayıt başarıyla Eklendi",
             };
         }
     }

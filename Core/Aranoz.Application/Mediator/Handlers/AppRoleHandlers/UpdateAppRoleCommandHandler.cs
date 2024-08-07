@@ -1,7 +1,7 @@
 ﻿using Aranoz.Application.Base;
 using Aranoz.Application.Interfaces;
-using Aranoz.Application.Mediator.Commands.OrderCommands;
-using Aranoz.Application.Validator.OrderValidator;
+using Aranoz.Application.Mediator.Commands.AppRoleCommands;
+using Aranoz.Application.Validator.AppRoleValidator;
 using Aranoz.Domain.Entity;
 using AutoMapper;
 using FluentValidation.Results;
@@ -13,25 +13,25 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Aranoz.Application.Mediator.Handlers.OrderHandlers
+namespace Aranoz.Application.Mediator.Handlers.AppRoleHandlers
 {
-    public class UptadeOrderCommandHandler : IRequestHandler<UpdateOrderCommand, Response<object>>
-    { 
-        private readonly IRepository<Order> _repository;
+    public class UpdateAppRoleCommandHandler : IRequestHandler<UpdateAppRoleCommand, Response<object>>
+    {
+        private readonly IRepository<AppRole> _repository;
         private readonly IMapper _mapper;
-        public UptadeOrderCommandHandler(IRepository<Order> repository, IMapper mapper)
+        public UpdateAppRoleCommandHandler(IRepository<AppRole> repository, IMapper mapper)
         {
             _repository = repository;
             _mapper = mapper;
         }
 
-        public async Task<Response<object>> Handle(UpdateOrderCommand request, CancellationToken cancellationToken)
+        public async Task<Response<object>> Handle(UpdateAppRoleCommand request, CancellationToken cancellationToken)
         {
-            UpdateOrderCommandValidator validationRules = new UpdateOrderCommandValidator(); 
-            ValidationResult validation= validationRules.Validate(request);  
-            if (!validation.IsValid) 
-            {  
-                 var response= new Response<object>();
+           UpdateApproleCommandValidator validationRules = new UpdateApproleCommandValidator(); 
+           ValidationResult validation= validationRules.Validate(request);
+            if (!validation.IsValid)
+            {
+                var response = new Response<object>();
                 foreach (var item in validation.Errors)
                 {
                     response.Errors.Add(item.ErrorMessage.ToString());
@@ -43,8 +43,8 @@ namespace Aranoz.Application.Mediator.Handlers.OrderHandlers
                 response.Message = "Kayıt güncellenirken Sorun Yaşandı";
                 return response;
 
-            } 
-            var result =_mapper.Map<Order>(request); 
+            }
+            var result = _mapper.Map<AppRole>(request);
             await _repository.UpdateAsync(result);
             return new Response<object>
             {
