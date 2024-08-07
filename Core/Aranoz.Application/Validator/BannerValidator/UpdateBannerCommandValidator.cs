@@ -20,5 +20,3 @@ namespace Aranoz.Application.Validator.BannerValidator
         }
     }
 }
-    }
-}
