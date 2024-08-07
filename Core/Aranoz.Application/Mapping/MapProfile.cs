@@ -1,36 +1,25 @@
 ﻿using Aranoz.Application.Mediator.Commands.AddressCommands;
 using Aranoz.Application.Mediator.Commands.BasketCommands;
+using Aranoz.Application.Mediator.Commands.BrandCommands;
 using Aranoz.Application.Mediator.Commands.CategoryCommands;
 using Aranoz.Application.Mediator.Commands.CommentCommands;
 using Aranoz.Application.Mediator.Commands.ContactCommands;
 using Aranoz.Application.Mediator.Commands.MessageCommands;
 using Aranoz.Application.Mediator.Commands.OrderCommands;
 using Aranoz.Application.Mediator.Commands.ProductCommands;
+using Aranoz.Application.Mediator.Commands.ProductDetailCommands;
 using Aranoz.Application.Mediator.Results.AddressResults;
 using Aranoz.Application.Mediator.Results.BasketResults;
+using Aranoz.Application.Mediator.Results.BrandResults;
 using Aranoz.Application.Mediator.Results.CategoryResults;
 using Aranoz.Application.Mediator.Results.CommentResults;
 using Aranoz.Application.Mediator.Results.ContactResults;
 using Aranoz.Application.Mediator.Results.MessageResults;
 using Aranoz.Application.Mediator.Results.OrderResults;
+using Aranoz.Application.Mediator.Results.ProductDetailResults;
 using Aranoz.Application.Mediator.Results.ProductResults;
 using Aranoz.Domain.Entity;
 using AutoMapper;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aranoz.Application.Mediator.Commands.ProductCommands;
-using Aranoz.Application.Mediator.Results.ProductResults;
-using Aranoz.Application.Mediator.Commands.ContactCommands;
-using Aranoz.Application.Mediator.Results.ContactResults;
-using Aranoz.Application.Mediator.Commands.OrderCommands;
-using Aranoz.Application.Mediator.Results.OrderResults;
-using Aranoz.Application.Mediator.Commands.CategoryCommands;
-using Aranoz.Application.Mediator.Results.CategoryResults;
-using Aranoz.Application.Mediator.Commands.BasketCommands;
-using Aranoz.Application.Mediator.Results.BasketResults;
 
 namespace Aranoz.Application.Mapping
 {
@@ -79,6 +68,15 @@ namespace Aranoz.Application.Mapping
             CreateMap<Basket, GetBasketByIdQueryResult>().ReverseMap();
             CreateMap<Basket, GetBasketQueryResult>().ReverseMap();
 
+            CreateMap<Brand, CreateBrandCommand>().ReverseMap();
+            CreateMap<Brand, UpdateBrandCommand>().ReverseMap();
+            CreateMap<Brand, GetBrandByIdQueryResult>().ReverseMap();
+            CreateMap<Brand, GetBrandQueryResult>().ReverseMap();
+
+            CreateMap<ProductDetail, CreateProductDetailCommand>().ReverseMap();
+            CreateMap<ProductDetail, UpdateProductDetailCommand>().ReverseMap();
+            CreateMap<ProductDetail, GetProductDetailByIdQueryResult>().ReverseMap();
+            CreateMap<ProductDetail, GetProductDetailQueryResult>().ReverseMap();
 
         }
     }
