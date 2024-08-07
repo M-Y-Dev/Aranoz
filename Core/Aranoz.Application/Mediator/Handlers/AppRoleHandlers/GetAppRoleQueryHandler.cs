@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace Aranoz.Application.Mediator.Handlers.AppRoleHandlers
 {
-    public class GetAppRoleQueryHandler : IRequestHandler<GetAppRoleQuery, Response<List<GetAppRoleQueryResult>
+    public class GetAppRoleQueryHandler : IRequestHandler<GetAppRoleQuery, Response<List<GetAppRoleQueryResult>>>
     {
         private readonly IRepository<AppUser> _repository;
         private readonly IMapper _mapper;
