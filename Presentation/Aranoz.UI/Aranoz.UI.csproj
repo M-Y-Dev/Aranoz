@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Views\Shared\Components\_UIAranozHeadComponentPartial\" />
   </ItemGroup>
 
   <ItemGroup>
