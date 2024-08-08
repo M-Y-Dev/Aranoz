@@ -14,6 +14,8 @@ namespace Aranoz.Application.Mediator.Commands.ProductCommands
         public string ProductImageUrl { get; set; }
         public int ProductStock { get; set; }
         public decimal Price { get; set; }
+        public bool IsFeatured { get; set; }
+
         public int CategoryID { get; set; }
         public DateTime CreatedDate { get => DateTime.Now; }
     }
