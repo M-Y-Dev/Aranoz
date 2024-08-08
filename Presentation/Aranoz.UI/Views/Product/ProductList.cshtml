@@ -1,0 +1,123 @@
+﻿@{
+    ViewData["Title"] = "ProductList";
+    Layout = "~/Views/Shared/_UIAranozLayout.cshtml";
+}
+
+<!doctype html>
+<html lang="zxx">
+@*    Buradaki View componentsler ProductViewComponents içerisinde bulunan ProductListComponents içerisinde *@
+<body>
+    <!--::header part start::-->
+    @await Component.InvokeAsync("ProductListHeaderComponentPartial")
+    <!-- Header part end-->
+    <!--================Home Banner Area =================-->
+    <!-- breadcrumb start-->
+    <!-- breadcrumb start-->
+    <!--Normalde sectionın hepsini bir componentsin içine almıştım geri böyle yaptım isteğe göre düzelte bilirim. -->
+
+    <section class="cat_product_area section_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="left_sidebar_area">
+                        @await Component.InvokeAsync("ProductListCategoryFilterComponentPartial")
+                        @await Component.InvokeAsync("ProductListProductFilterComponentPartial")
+                        @await Component.InvokeAsync("ProductListColorFilterComponentPartial")
+                        @await Component.InvokeAsync("ProductListPriceFilterComponentPartial")
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    @await Component.InvokeAsync("ProductListProducNavbarFilterComponentPartial")
+                    <!-- Ürünlerin listelenmesi ve içinde Sayfa numaralandırma components menüsü PageList var-->
+                    @await Component.InvokeAsync("ProductListGetListProductComponentPartial")
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="product_list best_seller">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="section_tittle text-center">
+                        <h2>Best Sellers <span>shop</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-12">
+                    <div class="best_product_slider owl-carousel">
+                        <div class="single_product_item">
+                            <img src="img/product/product_1.png" alt="">
+                            <div class="single_product_text">
+                                <h4>Quartz Belt Watch</h4>
+                                <h3>$150.00</h3>
+                            </div>
+                        </div>
+                        <div class="single_product_item">
+                            <img src="img/product/product_2.png" alt="">
+                            <div class="single_product_text">
+                                <h4>Quartz Belt Watch</h4>
+                                <h3>$150.00</h3>
+                            </div>
+                        </div>
+                        <div class="single_product_item">
+                            <img src="img/product/product_3.png" alt="">
+                            <div class="single_product_text">
+                                <h4>Quartz Belt Watch</h4>
+                                <h3>$150.00</h3>
+                            </div>
+                        </div>
+                        <div class="single_product_item">
+                            <img src="img/product/product_4.png" alt="">
+                            <div class="single_product_text">
+                                <h4>Quartz Belt Watch</h4>
+                                <h3>$150.00</h3>
+                            </div>
+                        </div>
+                        <div class="single_product_item">
+                            <img src="img/product/product_5.png" alt="">
+                            <div class="single_product_text">
+                                <h4>Quartz Belt Watch</h4>
+                                <h3>$150.00</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- product_list part end-->
+    <!--::footer_part start::-->
+    <!--::footer_part end::-->
+    <!-- jquery plugins here-->
+    <script src="~/aranoz-master/js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="~/aranoz-master/js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="~/aranoz-master/js/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="~/aranoz-master/js/jquery.magnific-popup.js"></script>
+    <!-- swiper js -->
+    <script src="~/aranoz-master/js/swiper.min.js"></script>
+    <!-- swiper js -->
+    <script src="~/aranoz-master/js/masonry.pkgd.js"></script>
+    <!-- particles js -->
+    <script src="~/aranoz-master/js/owl.carousel.min.js"></script>
+    <script src="~/aranoz-master/js/jquery.nice-select.min.js"></script>
+    <!-- slick js -->
+    <script src="~/aranoz-master/js/slick.min.js"></script>
+    <script src="~/aranoz-master/js/jquery.counterup.min.js"></script>
+    <script src="~/aranoz-master/js/waypoints.min.js"></script>
+    <script src="~/aranoz-master/js/contact.js"></script>
+    <script src="~/aranoz-master/js/jquery.ajaxchimp.min.js"></script>
+    <script src="~/aranoz-master/js/jquery.form.js"></script>
+    <script src="~/aranoz-master/js/jquery.validate.min.js"></script>
+    <script src="~/aranoz-master/js/mail-script.js"></script>
+    <script src="~/aranoz-master/js/stellar.js"></script>
+    <script src="~/aranoz-master/js/price_rangs.js"></script>
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
+

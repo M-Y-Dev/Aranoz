@@ -1,8 +1,36 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_UIAranozLayout.cshtml";
 }
+<!doctype html>
+<html lang="zxx">
+<body>
+    <!--::header part start::-->
+    <!-- Header part end-->
+    <!-- banner part start-->
+    @await Component.InvokeAsync("DefaultSliderComponentPartial")
+    <!-- banner part start-->
+    <!-- feature  start-->
+    @await Component.InvokeAsync("DefaultFeatureComponentPartial")
+    <!-- feature  end-->
+    <!-- product_listslider start-->
+    @await Component.InvokeAsync("DefaultProductListSliderComponentPartial")
+    <!-- product_listslider part end-->
+    <!-- discountCounter part start-->
+    @await Component.InvokeAsync("DefaultDiscountCounterComponentPartial")
+    <!-- discountCounter (indirim sayacı) part end-->
+    <!-- bestseller part start-->
+    @await Component.InvokeAsync("DefaultBestSellerComponentPartial")
+    <!-- bestseller part end-->
+    <!-- Newsletter part start-->
+    @await Component.InvokeAsync("DefaultNewsletterComponentPartial")
+    <!--Newsletter part end::-->
+    <!-- brands (marka ve sponsorlar) part start-->
+    @await Component.InvokeAsync("DefaultBrandComponentPartial")
 
-<h1>Index</h1>
+    <!--brands (marka ve sponsorlar):-->
+
+</body>
+
+</html>
 
