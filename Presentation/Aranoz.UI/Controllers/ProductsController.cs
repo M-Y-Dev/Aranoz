@@ -2,9 +2,13 @@
 
 namespace Aranoz.UI.Controllers
 {
-    public class ProductController : Controller
+    public class ProductsController : Controller
     {
         public IActionResult ProductList()
+        {
+            return View();
+        }
+        public IActionResult ProductDetail()
         {
             return View();
         }

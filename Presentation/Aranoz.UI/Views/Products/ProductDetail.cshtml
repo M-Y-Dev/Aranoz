@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewData["Title"] = "ProductDetail";
+    Layout = "~/Views/Shared/_UIAranozLayout.cshtml";
+}
+
+<!doctype html>
+<html lang="zxx">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>aranoz</title>
+    <link rel="icon" href="~/aranoz-master/img/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/aranoz-master/css/bootstrap.min.css">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="~/aranoz-master/css/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="~/aranoz-master/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/aranoz-master/css/lightslider.min.css">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="~/aranoz-master/css/all.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="~/aranoz-master/css/flaticon.css">
+    <link rel="stylesheet" href="~/aranoz-master/css/themify-icons.css">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="~/aranoz-master/css/magnific-popup.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="~/aranoz-master/css/style.css">
+</head>
+
+<body>
+    <!--::header part start::-->
+    @await Component.InvokeAsync("ProductDetailHeaderComponentPartial")
+    <!-- Header part end-->
+
+    <!-- Ürün satış bilgileri ve sepete ekle butonu var-->
+    @await Component.InvokeAsync("ProductDetailInformationComponentPartial")
+    <!-- Ürüne ait yorumlar ürün bilgileri ürün özellikleri bulunuyor -->
+    @await Component.InvokeAsync("ProductDetailIAboutComponentPartial")
+
+    <!--================Scirptler düzenlenecek! =================-->
+
+    <script src="~/aranoz-master/js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="~/aranoz-master/js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="~/aranoz-master/js/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="~/aranoz-master/js/jquery.magnific-popup.js"></script>
+    <!-- swiper js -->
+    <script src="~/aranoz-master/js/lightslider.min.js"></script>
+    <!-- swiper js -->
+    <script src="~/aranoz-master/js/masonry.pkgd.js"></script>
+    <!-- particles js -->
+    <script src="~/aranoz-master/js/owl.carousel.min.js"></script>
+    <script src="~/aranoz-master/js/jquery.nice-select.min.js"></script>
+    <!-- slick js -->
+    <script src="~/aranoz-master/js/slick.min.js"></script>
+    <script src="~/aranoz-master/js/swiper.jquery.js"></script>
+    <script src="~/aranoz-master/js/jquery.counterup.min.js"></script>
+    <script src="~/aranoz-master/js/waypoints.min.js"></script>
+    <script src="~/aranoz-master/js/contact.js"></script>
+    <script src="~/aranoz-master/js/jquery.ajaxchimp.min.js"></script>
+    <script src="~/aranoz-master/js/jquery.form.js"></script>
+    <script src="~/aranoz-master/js/jquery.validate.min.js"></script>
+    <script src="~/aranoz-master/js/mail-script.js"></script>
+    <script src="~/aranoz-master/js/stellar.js"></script>
+    <!-- custom js -->
+    <script src="~/aranoz-master/js/theme.js"></script>
+    <script src="~/aranoz-master/js/custom.js"></script>
+</body>
+
+</html>
+
