@@ -2,7 +2,7 @@
 
 namespace Aranoz.UI.Controllers
 {
-    public class DefaultController : Controller
+    public class DefaultsController : Controller
     {
         public IActionResult Index()
         {

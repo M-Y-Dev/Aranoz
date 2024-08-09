@@ -1,0 +1,22 @@
+﻿<section class="blog_area padding_top">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mb-5 mb-lg-0">
+                <div class="blog_left_sidebar">
+                    @await Component.InvokeAsync("BlogListGetBlogComponentPartial")
+                    @await Component.InvokeAsync("BlogListPageListComponentPartial")
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="blog_right_sidebar">
+                    @await Component.InvokeAsync("BlogListBlogSearchComponentPartial")
+                    @await Component.InvokeAsync("BlogListBlogCategoryWidgetComponentPartial")
+                    @await Component.InvokeAsync("BlogListRecentPostWidgetComponentPartial")
+                    @await Component.InvokeAsync("BlogListTagWidgetComponentPartial")
+                    @await Component.InvokeAsync("BlogListImageFeedWidgetComponentPartial")
+                    @await Component.InvokeAsync("BlogListNewsletterWidgetComponentPartial")
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

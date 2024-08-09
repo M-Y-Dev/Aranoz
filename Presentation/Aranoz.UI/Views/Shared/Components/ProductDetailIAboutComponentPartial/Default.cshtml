@@ -1,0 +1,12 @@
+﻿
+<section class="product_description_area">
+    <div class="container">
+        @await Component.InvokeAsync("ProductDetailAboutNavbarComponentPartial")
+        <div class="tab-content" id="myTabContent">
+            @await Component.InvokeAsync("ProductDetailIDescriptionForProductComponentPartial")
+            @await Component.InvokeAsync("ProductDetailSpecificationComponentPartial")
+            @await Component.InvokeAsync("ProductDetailCommentComponentPartial")
+            @await Component.InvokeAsync("ProductDetailReviewComponentPartial")
+        </div>
+    </div>
+</section>
