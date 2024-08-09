@@ -13,6 +13,7 @@ namespace Aranoz.Application.Mediator.Results.ProductResults
         public string ProductImageUrl { get; set; }
         public int ProductStock { get; set; }
         public decimal Price { get; set; }
+        public bool IsFeatured { get; set; }
         public int CategoryID { get; set; }
     }
 }

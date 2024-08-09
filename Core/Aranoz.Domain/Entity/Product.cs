@@ -13,7 +13,7 @@ namespace Aranoz.Domain.Entity
         public string ProductImageUrl { get; set; }
         public int ProductStock { get; set; }
         public decimal Price { get; set; }
-       
+       public bool IsFeatured { get; set; }
         public int CategoryID { get; set; }
         public Category Category { get; set; }
         public List<ProductDetail> ProductDetails { get; set; }
