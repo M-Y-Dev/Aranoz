@@ -43,7 +43,7 @@ namespace Aranoz.Application.Mediator.Handlers.AppUserHandlers
 
             }
 
-            var value = _repository.GetById(request.Id);
+            var value = _repository.GetSingleByIdAsync(request.Id);
             if (value is null)
                 return new Response<object>
                 {

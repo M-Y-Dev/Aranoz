@@ -46,7 +46,7 @@ namespace Aranoz.Application.Mediator.Handlers.ProductHandlers
                 return response;
             }
 
-            var value = await _repository.GetById(request.Id);
+            var value = await _repository.GetSingleByIdAsync(request.Id);
 
             if (value is null)
                 return new Response<GetProductByIdQueryResult>
@@ -54,7 +54,7 @@ namespace Aranoz.Application.Mediator.Handlers.ProductHandlers
                     StatusCode = (int)HttpStatusCode.NotFound,
                     Data = null,
                     IsSuccessfull = false,
-                   Message = "Kayıt bulunamadı"
+                    Message = "Kayıt bulunamadı"
                 };
             return new Response<GetProductByIdQueryResult>
             {

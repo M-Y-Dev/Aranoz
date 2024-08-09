@@ -46,7 +46,7 @@ namespace Aranoz.Application.Mediator.Handlers.AppRoleHandlers
                 return response;
             }
 
-            var values = _repository.GetById(request.Id);
+            var values = _repository.GetSingleByIdAsync(request.Id);
 
             if (values is null)
                 return new Response<GetAppRoleByIdQueryResult>

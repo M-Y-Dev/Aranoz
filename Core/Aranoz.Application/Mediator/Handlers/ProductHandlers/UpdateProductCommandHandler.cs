@@ -45,25 +45,33 @@ namespace Aranoz.Application.Mediator.Handlers.ProductHandlers
                 return response;
             }
 
-            var value = await _repository.GetById(request.Id);
+            var value = await _repository.GetSingleByIdAsync(request.Id);
             if (value is null)
                 return new Response<object>
                 {
                     StatusCode = (int)HttpStatusCode.NotFound,
                     Data = null,
                     IsSuccessfull = false,
-                    Message = "Aranılan kayıt bulunamadı"
+                    Message = "Güncellenecek kayıt bulunamadı"
                 };
 
             _mapper.Map(request, value);
-            await _repository.UpdateAsync(value);
+            var result = await _repository.UpdateAsync(value);
 
+            if(result)
+                return new Response<object>
+                {
+                    StatusCode = (int)HttpStatusCode.OK,
+                    Data = null,
+                    IsSuccessfull = true,
+                    Message = "Kayıt güncellendi"
+                };
             return new Response<object>
             {
-                StatusCode = (int)HttpStatusCode.OK,
+                StatusCode = 500,
                 Data = null,
-                IsSuccessfull = true,
-                Message = "Kayıt güncellendi"
+                IsSuccessfull = false,
+                Message = "Kayıt güncellenemedi"
             };
         }
     }

@@ -45,15 +45,24 @@ namespace Aranoz.Application.Mediator.Handlers.ProductHandlers
                 return response;
             }
 
-            var result = _mapper.Map<Product>(request);
-            await _repository.CreateAsync(result);
+            var mapped = _mapper.Map<Product>(request);
+            var result = await _repository.CreateAsync(mapped);
+
+            if(result) // result==true anlamındadır ve sonuç başarılıdır
+                return new Response<object>
+                {
+                   StatusCode = (int)HttpStatusCode.Created,
+                   Data = null,
+                   IsSuccessfull = true,
+                   Message = "Kayıt başarıyla eklendi",
+                };
 
             return new Response<object>
             {
-               StatusCode = (int)HttpStatusCode.Created,
+                StatusCode = 500,
                 Data = null,
-               IsSuccessfull = true,
-               Message = "Kayıt başarıyla eklendi",
+                IsSuccessfull = false,
+                Message = "Kayıt eklenemedi",
             };
         }
     }

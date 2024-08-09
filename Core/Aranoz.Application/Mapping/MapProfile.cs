@@ -43,6 +43,17 @@ namespace Aranoz.Application.Mapping
             CreateMap<Product, UpdateProductCommand>().ReverseMap();
             CreateMap<Product, GetProductByIdQueryResult>().ReverseMap();
             CreateMap<Product, GetProductQueryResult>().ReverseMap();
+            CreateMap<int, GetProductCountQueryResult>()
+                .ConvertUsing(value => new GetProductCountQueryResult { ProductCount = value }); // gelen int değeri aktarmak için convert yapılır.
+            CreateMap<int, GetProductFilterCountQueryResult>()
+                .ConvertUsing(value => new GetProductFilterCountQueryResult { ProductCount = value });
+
+            CreateMap<Product, GetProductWithCategoryIncludeQueryResult>()
+                .AfterMap((source, destination) =>  destination.CategoryName = source.Category.CategoryName )
+                .ReverseMap();
+            CreateMap<Product, GetProductFilterAndIncludeQueryResult>()
+                .AfterMap((source, destination) => destination.CategoryName = source.Category.CategoryName)
+                .ReverseMap();
 
             CreateMap<Address, CreateAddressCommand>().ReverseMap();
             CreateMap<Address, UpdateAddressCommand>().ReverseMap();

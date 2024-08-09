@@ -42,7 +42,7 @@ namespace Aranoz.Application.Mediator.Handlers.ProductHandlers
                 return response;
             }
 
-            var value = await _repository.GetById(request.Id);
+            var value = await _repository.GetSingleByIdAsync(request.Id);
 
             if (value is null)
                 return new Response<object>
@@ -53,13 +53,22 @@ namespace Aranoz.Application.Mediator.Handlers.ProductHandlers
                     Message = "Silinecek kayıt bulunamadı"
                 };
 
-            await _repository.DeleteAsync(request.Id);
+            var result = await _repository.DeleteAsync(request.Id);
+
+            if(result) // result==true anlamındadır ve sonuç başarılıdır
+                return new Response<object>
+                {
+                    StatusCode = (int)HttpStatusCode.OK,
+                    Data = null,
+                    IsSuccessfull = true,
+                    Message = "Kayıt Silindi",
+                };
             return new Response<object>
             {
-                StatusCode = (int)HttpStatusCode.OK,
-                Data = "Kayıt silindi",
-                IsSuccessfull = true,
-                Message = null,
+                StatusCode = 500,
+                Data = null,
+                IsSuccessfull = false,
+                Message = "Kayıt silinemedi",
             };
 
         }

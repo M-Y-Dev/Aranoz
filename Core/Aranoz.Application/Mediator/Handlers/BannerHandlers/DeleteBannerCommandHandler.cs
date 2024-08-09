@@ -41,7 +41,7 @@ namespace Aranoz.Application.Mediator.Handlers.BannerHandlers
                 return response;
             }
 
-            var value = await _repository.GetById(request.Id);
+            var value = await _repository.GetSingleByIdAsync(request.Id);
 
             if (value is null)
                 return new Response<object>

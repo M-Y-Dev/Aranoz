@@ -31,5 +31,10 @@ namespace Aranoz.Persistance.Context
         public DbSet<AppRole> AppRoles { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<BlogCategory> BlogCategories { get; set; }
+
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            return base.SaveChangesAsync(cancellationToken);
+        }
     }
 }
