@@ -12,6 +12,7 @@ using Aranoz.Application.Mediator.Commands.CommentCommands;
 using Aranoz.Application.Mediator.Commands.ContactCommands;
 using Aranoz.Application.Mediator.Commands.MessageCommands;
 using Aranoz.Application.Mediator.Commands.OrderCommands;
+using Aranoz.Application.Mediator.Commands.OrderDetailCommands;
 using Aranoz.Application.Mediator.Commands.ProductCommands;
 using Aranoz.Application.Mediator.Commands.ProductDetailCommands;
 using Aranoz.Application.Mediator.Results.AddressResults;
@@ -27,6 +28,7 @@ using Aranoz.Application.Mediator.Results.CategoryResults;
 using Aranoz.Application.Mediator.Results.CommentResults;
 using Aranoz.Application.Mediator.Results.ContactResults;
 using Aranoz.Application.Mediator.Results.MessageResults;
+using Aranoz.Application.Mediator.Results.OrderDetailResults;
 using Aranoz.Application.Mediator.Results.OrderResults;
 using Aranoz.Application.Mediator.Results.ProductDetailResults;
 using Aranoz.Application.Mediator.Results.ProductResults;
@@ -120,6 +122,12 @@ namespace Aranoz.Application.Mapping
             CreateMap<BlogCategory, UpdateBlogCategoryCommand>().ReverseMap();
             CreateMap<BlogCategory, GetBlogCategoryByIdQueryResult>().ReverseMap();
             CreateMap<BlogCategory, GetBlogCategoryQueryResult>().ReverseMap();
+
+
+            CreateMap<OrderDetail, CreateOrderDetailCommand>().ReverseMap();
+            CreateMap<OrderDetail, UpdateOrderDetailCommand>().ReverseMap();
+            CreateMap<OrderDetail, GetOrderDetailByIdQueryResult>().ReverseMap();
+            CreateMap<OrderDetail, GetOrderDetailQueryResult>().ReverseMap();
 
 
         }
