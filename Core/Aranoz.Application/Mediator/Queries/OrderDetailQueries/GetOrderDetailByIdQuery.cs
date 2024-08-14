@@ -12,7 +12,7 @@ namespace Aranoz.Application.Mediator.Queries.OrderDetailQueries
     public class GetOrderDetailByIdQuery : IRequest<Response<GetOrderDetailByIdQueryResult>>
     {
         public int Id { get; set; }
-        public GetOrderDetailByIdQuery()
+        public GetOrderDetailByIdQuery(int id)
         {
             Id = id;
         }
