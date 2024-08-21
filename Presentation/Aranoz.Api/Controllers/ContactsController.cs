@@ -2,6 +2,7 @@
 using Aranoz.Application.Mediator.Commands.MessageCommands;
 using Aranoz.Application.Mediator.Queries.ContactQueries;
 using Aranoz.Application.Mediator.Queries.MessageQueries;
+using Aranoz.Application.Mediator.Queries.ProductQueries;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -47,6 +48,18 @@ namespace Aranoz.Api.Controllers
         public async Task<IActionResult> GetContact()
         {
             var result = await _mediator.Send(new GetContactQuery());
+            return Ok(result);
+        }
+        [HttpGet("GetContactCount")]
+        public async Task<IActionResult> GetContactCount()
+        {
+            var result = await _mediator.Send(new GetContactCountQuery());
+            return Ok(result);
+        }
+        [HttpGet("GetContactWithInclude")]
+        public async Task<IActionResult> GetContactWithInclude()
+        {
+            var result = await _mediator.Send(new GetContactWithUserIncludeQuery());
             return Ok(result);
         }
     }

@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Aranoz.Application.Mediator.Results.ContactResults
 {
-    public class GetContactByIdQueryResult
+    public class GetContactWithCategoryIncludeQueryResult
     {
         public int Id { get; set; }
         public string CompleteName { get; set; }
         public string Email { get; set; }
         public string Subject { get; set; }
         public string Message { get; set; }
-        public int UserId { get; set; }
+
     }
 }
